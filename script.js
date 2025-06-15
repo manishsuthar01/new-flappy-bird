@@ -239,9 +239,9 @@ start_btn.addEventListener("click", () => {
   gameLoop();
   start_btn.disabled = true;
   start_btn.innerText = "Playing...";
-  bgSound.currentTime=0;
-  bgSound.play();
-  bgSound.volume = 0.3; // Set background sound volume
+  // bgSound.currentTime=0;
+  // bgSound.play();
+  // bgSound.volume = 0.3; // Set background sound volume
 });
 
 // reset the game
