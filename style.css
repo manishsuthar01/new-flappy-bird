@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #70c5ce;
+  gap: 20px;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+}
+
+/* Responsive Canvas */
+canvas {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3 / 4; /* Ensures proper shape on all screens */
+  border: 2px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Start Button Styling */
+.start_btn ,.jump{
+  width: 80%;
+  max-width: 300px;
+  height: 50px;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.jump:hover,.start_btn:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+
+.start_btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* media query */
+/* Hide the jump button on large screens (desktop) */
+@media screen and (min-width: 768px) {
+  .jump {
+    display: none;
+  }
+}
